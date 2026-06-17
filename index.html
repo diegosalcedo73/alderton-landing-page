@@ -12,7 +12,6 @@
       min-height: 100vh;
       background-color: #F4EDE2;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       font-family: 'Inter', sans-serif;
@@ -31,39 +30,37 @@
     .mark {
       width: 120px;
       height: 120px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .wordmark {
       font-family: 'Cinzel', serif;
-      font-size: clamp(38px, 9vw, 64px);
+      font-size: 58px;
       font-weight: 600;
       letter-spacing: 0.22em;
       color: #6B3F2A;
-      line-height: 1;
       margin-bottom: 16px;
     }
 
     .rule {
-      width: 100%;
+      width: 80%;
       height: 1px;
-      background: linear-gradient(to right, transparent, #9B8C7C, transparent);
+      background-color: #9B8C7C;
+      opacity: 0.5;
       margin-bottom: 14px;
-      opacity: 0.6;
     }
 
     .tagline {
       font-family: 'Cinzel', serif;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 400;
-      letter-spacing: 0.28em;
+      letter-spacing: 0.26em;
       color: #9B8C7C;
       text-transform: uppercase;
       margin-bottom: 56px;
     }
 
     .pillars {
-      font-family: 'Inter', sans-serif;
       font-size: 11px;
       font-weight: 300;
       letter-spacing: 0.24em;
@@ -74,4 +71,86 @@
 
     .form {
       display: flex;
-      flex-direction:
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 400px;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #9B8C7C;
+      color: #2C1A0E;
+      outline: none;
+      text-align: center;
+      letter-spacing: 0.04em;
+      transition: border-color 0.2s;
+    }
+
+    .form-input::placeholder {
+      color: #9B8C7C;
+      opacity: 0.8;
+    }
+
+    .form-input:focus {
+      border-bottom-color: #6B3F2A;
+    }
+
+    .form-button {
+      width: 100%;
+      padding: 14px;
+      background-color: #3D4E35;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: #F4EDE2;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .form-button:hover {
+      background-color: #6B3F2A;
+    }
+
+    .no-spam {
+      font-size: 11px;
+      font-weight: 300;
+      color: #9B8C7C;
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <img class="mark" src="alderton_mark_brown.png" alt="Alderton" />
+
+    <h1 class="wordmark">ALDERTON</h1>
+
+    <div class="rule"></div>
+
+    <p class="tagline">Elevate Your Everyday</p>
+
+    <p class="pillars">Body &middot; Mind &middot; Lifestyle</p>
+
+    <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input class="form-input" type="email" name="email" placeholder="Your email address" required />
+      <button class="form-button" type="submit">Join the Waitlist</button>
+    </form>
+
+    <p class="no-spam">No spam. Ever. Just the moment Alderton goes live.</p>
+
+  </div>
+</body>
+</html>
